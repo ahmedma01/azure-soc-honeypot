@@ -29,10 +29,10 @@ in Azure Workbooks.
 
 ## Key Features
 - **Live Honeypot** — Real-world attack data collected from exposed VM
-- **SIEM Integration** — Sentinel ingesting and correlating security logs
-- **KQL Queries** — Custom queries extracting attacker geographic locations
+- **SIEM Integration** — Sentinel receiving and correlating security logs
+- **KQL Queries** — Custom queries getting attacker geographic locations
 - **Attack Map** — Interactive global map of live threats built in Azure Workbooks
-- **NSG Analysis** — Intentionally misconfigured firewall to attract attacks
+- **NSG Analysis** — Intentionally misconfigured firewall for the vm to get attacks
 
 ## Screenshots
 
