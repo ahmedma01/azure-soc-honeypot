@@ -3,17 +3,17 @@
 A cloud-based Security Operations Centre (SOC) lab built on Microsoft Azure,
 designed to collect and analyse real-world attack data from the internet.
 This project simulates how security teams detect, investigate, and visualise 
-threats using industry-standard SIEM tooling.
+threats using industry-standard SIEM.
 
 ## Overview
-Rather than just learning about SIEM tools theoretically, I built a live 
+Instead of just learning about SIEM tools theoretically, I built a live 
 environment where real attackers interact with an intentionally exposed VM. 
 This generated genuine attack data that I could investigate, query, and 
-visualise — mirroring how SOC analysts work in real organisations.
+visualise — copying how SOC analysts work in real organisations.
 
-The project involved deploying a vulnerable Windows VM as a honeypot, 
-configuring Microsoft Sentinel as the SIEM, writing KQL queries to extract 
-geographic data from failed login attempts, and building a live attack map 
+The project involved deploying a vulnerable Windows VM as a honeypot then 
+configuring Microsoft Sentinel as the SIEM while i write KQL queries to extract 
+geographic data from failed login attempts to build a live attack map 
 in Azure Workbooks.
 
 ## Tech Stack
@@ -48,13 +48,13 @@ in Azure Workbooks.
 ## How It Works
 1. A Windows VM was deployed on Azure and NSG rules were opened to allow 
    inbound traffic — making it an intentional target
-2. A **Log Analytics Workspace** was configured to ingest all security 
+2. A **Log Analytics Workspace** was configured to receive all security 
    logs from the VM
 3. **Microsoft Sentinel** was connected as the SIEM, monitoring the 
    workspace for threats
-4. Custom **KQL queries** were written to parse failed login logs and 
+4. Custom **KQL queries** were written to see failed login logs and 
    extract attacker IP addresses and geographic locations
-5. An **Azure Workbook** was built to plot attack origins on an 
+5. An **Azure Workbook** was built to mark attackers country/city on an 
    interactive world map in real time
 
 ## KQL Query Example
@@ -72,13 +72,10 @@ SecurityEvent
   suspicious patterns
 - Integrate threat intelligence feeds to enrich attacker IP data
 - Deploy a Linux honeypot alongside the Windows VM for comparison
-- Set up automated incident response playbooks using Logic Apps
-- Expand logging to capture lateral movement simulation
 
 ## Why This Project?
 I built this to:
 - Understand how SIEM tools ingest, correlate, and surface security events
-- See how real attackers behave when targeting exposed cloud infrastructure
 - Practice writing KQL to investigate genuine attack data
 - Learn how threat intelligence is visualised for SOC teams
 - Gain hands-on Azure experience beyond just deploying VMs
